@@ -11,6 +11,7 @@ public class GrayScale {
 
     public void rescale(Mat image) {
         Imgproc.cvtColor(image, image, Imgproc.COLOR_RGB2GRAY);
+        Imgproc.threshold(image, image, 100,255, Imgproc.THRESH_BINARY);
     }
 
 }
